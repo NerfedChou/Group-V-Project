@@ -142,7 +142,6 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 30rem;
     transition: height 1s ease;
-    transition: 0.5s;
     max-height: 200rem;
 
 }
@@ -322,7 +321,7 @@ header {
 
 .wrapper .form-container button {
     border: none;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 10px 40px;
     border-radius: 10px;
     background-color: #2f3134;
@@ -335,7 +334,6 @@ header {
     cursor: pointer;
     transition: 0.5s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
 }
 
 .wrapper .form-container button:hover {
@@ -359,8 +357,12 @@ header {
     text-decoration: underline;
     color: #2f3134;
     font-weight: 600;
+    cursor: pointer;
 }
 
+.register-link p {
+    cursor: default;
+}
 .login-link {
     text-decoration: none;
     color: #2f3134;
@@ -376,6 +378,10 @@ header {
     text-decoration: underline;
     color: #2f3134;
     font-weight: 600;
+    cursor: pointer;
+}
+.login-link p {
+    cursor: default;
 }
 
 main {
