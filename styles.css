@@ -10,6 +10,7 @@ colors [16181a , beb3a2, c4bcaf, d2cec6]
     font-family: 'Poppins';
     src: url("poppins/Poppins-Regular.ttf");
 }
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -79,6 +80,7 @@ header {
     color: #2f3134;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 0.5s ease;
+    margin-right: 3rem;
 }
 #main-nav button:hover {
     background-color: #998E7C;
