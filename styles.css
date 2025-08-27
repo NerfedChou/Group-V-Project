@@ -214,7 +214,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 20rem;
     transition: height 1s ease;
-    max-height: 100rem;
+    min-height: 20rem;
 }
 .wrapper.active-popup {
     transform: translate(-50%, -50%);
@@ -228,7 +228,7 @@ header {
 }
 @media screen and (max-width: 400px) {
     .wrapper.active {
-        height: 90vh;
+        height: 85vh;
     }
 }
 .wrapper.active #login {
