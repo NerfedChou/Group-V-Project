@@ -210,9 +210,9 @@ header {
     -webkit-backdrop-filter: blur(4px);
     padding-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 30rem;
+    min-width: 25rem;
     transition: height 1s ease;
-    max-height: 200rem;
+    max-height: 100rem;
 }
 .wrapper.active-popup {
     transform: translate(-50%, -50%);
