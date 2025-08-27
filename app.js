@@ -32,9 +32,10 @@ closePop.addEventListener('click', () => {
 sideBar.addEventListener('click', () => {
     sidebar.style.display = 'flex';
     hamburger.style.display = 'none';
+    sidebar.classList.add('active-side');
 
 })
 sidebarClose.addEventListener('click', () => {
-    sidebar.style.display = 'none';
     hamburger.style.display = 'flex';
+    sidebar.classList.remove('active-side');
 })

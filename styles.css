@@ -1,9 +1,14 @@
-/*Color Palletes:
+/* Color Palletes:
 font = 2f23134 strictly follow
 
 mga frontends pang hapakon tamog mag gama mog inyong colors
 
 colors [16181a , beb3a2, c4bcaf, d2cec6]
+*/
+/*
+* {
+    outline: 1px solid red;
+}
 */
 @media (max-width: 800px) {
     #main-nav .hideonmobile {
@@ -18,14 +23,11 @@ colors [16181a , beb3a2, c4bcaf, d2cec6]
 }
 @media (max-width: 400px) {
     #main-nav .sidebar {
-        width: 100%;
         display: flex;
         align-items: center;
     }
-    #main-nav .sidebar ul {
-        right: 30%;
-    }
 }
+
 @font-face {
     font-family: 'Poppins';
     src: url("poppins/Poppins-Regular.ttf");
@@ -77,9 +79,7 @@ header {
     color: #2f3134;
     font-size: 1.2rem;
     font-weight: 500;
-
 }
-
 #main-nav ul li a:hover {
     color: #000;
     text-decoration: underline;
@@ -104,28 +104,27 @@ header {
     color: #fff;
     transition: 0.5s ease;
 }
-
 #main-nav .hamburger {
     opacity: 0;
     transition: 0.5s ease;
+    pointer-events: none;
 }
-
 .sidebar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -400px;
     margin: 0;
     width: 300px;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    display: none;
+    display: flex;
     justify-content: start;
     flex-direction: column;
     align-items: center;
-    z-index: 3;
-    padding: 30px
+    z-index: 6;
+    padding: 30px;
     transition: 0.5s ease;
 }
 .sidebar ul {
@@ -137,9 +136,9 @@ header {
     right: 20%;
 }
 .sidebar button {
-    position: absolute;
-    top: 27rem;
-    left: 25%;
+    position: relative;
+    width: 100%;
+    z-index: 2;
 }
 #sidebarclose {
     width: 30px;
@@ -148,7 +147,10 @@ header {
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    z-index: 4;
+    z-index: 100;
+}
+.sidebar.active-side {
+    right: 0;
 }
 #customer-service {
     position: fixed;
@@ -168,7 +170,6 @@ header {
     width: 50px;
     height: 50px;
 }
-
 .active-blur {
     position: fixed;
     top: 0;
@@ -185,7 +186,6 @@ header {
 .hidden-blur {
     transition: all 1s ease-in;
 }
-
 .wrapper {
     background-color: rgba(175, 175, 175, 0.5);
     top:50%;
@@ -196,7 +196,7 @@ header {
     width: 25%;
     height: 540px;
     position: fixed;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -208,17 +208,16 @@ header {
     min-width: 30rem;
     transition: height 1s ease;
     max-height: 200rem;
-
 }
 .wrapper.active-popup {
     transform: translate(-50%, -50%);
     opacity: 1;
     transition: 1s ease;
+    display: flex;
 }
 .wrapper.active {
     height: 60vh;
 }
-
 .wrapper.active #login {
     transition: 1s ease;
     pointer-events: none;
@@ -242,7 +241,6 @@ header {
     width: 100%;
     height: 100%;
 }
-
 #login {
     display: flex;
     justify-content: center;
@@ -264,7 +262,6 @@ header {
     pointer-events: none;
     transition: opacity 1s ease;
 }
-
 .close{
     width: 3rem;
     height: 3rem;
@@ -293,7 +290,6 @@ header {
     font-size: 2rem;
     cursor: default;
 }
-
 .wrapper .form-container .input-box {
     position: relative;
     width: 100%;
@@ -303,7 +299,6 @@ header {
     align-items: center;
     margin: 3rem 0;
 }
-
 .wrapper .form-container .input-box input {
     width: 100%;
     height: 100%;
@@ -332,13 +327,11 @@ header {
     right: 1rem;
     scale: 1.5;
 }
-
 .wrapper .form-container .input-box input:focus ~ label,
 .wrapper .form-container .input-box input:valid ~ label {
     top: -2rem;
     color: #2f3134;
 }
-
 .remember-forgot {
     display: flex;
     justify-content: space-evenly;
@@ -367,7 +360,6 @@ header {
     cursor: pointer;
     justify-content: space-around;
 }
-
 .remember-forgot input[type="checkbox"]:checked::after {
     content: "✓";
     position: absolute;
@@ -383,7 +375,6 @@ header {
     text-decoration: underline;
     text-decoration-color: #2f3134;
 }
-
 .wrapper .form-container button {
     border: none;
     margin: 2rem auto;
@@ -400,13 +391,11 @@ header {
     transition: 0.5s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .wrapper .form-container button:hover {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     color: #2f3134;
 }
-
 .register-link {
     text-decoration: none;
     color: #2f3134;
@@ -424,7 +413,6 @@ header {
     font-weight: 600;
     cursor: pointer;
 }
-
 .register-link p {
     cursor: default;
 }
@@ -448,7 +436,6 @@ header {
 .login-link p {
     cursor: default;
 }
-
 main {
     width: 100%;
     height: 100vh;
