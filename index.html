@@ -11,14 +11,28 @@
     <div class = "hidden-blur"></div>
     <header>
         <nav id = "main-nav">
-            <h1 id = "logo">RustLers</h1>
+            <div class="sidebar">
+                <ion-icon name="close" id = "sidebarclose"></ion-icon>
+                <ul>
+                    <li><h1 class="logo">RustLers</h1></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Register</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class = "button-pop">Login</button></li>
+                </ul>
+
+            </div>
+            <h1 class = "logo">RustLers</h1>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Register</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class = "hideonmobile"><a href="index.html">Home</a></li>
+                <li class = "hideonmobile"><a href="index.html">Register</a></li>
+                <li class = "hideonmobile"><a href="about.html">About</a></li>
+                <li class = "hideonmobile"><a href="contact.html">Contact</a></li>
+                <li class = "hideonmobile"><button class = "button-pop">Login</button></li>
+                <li class = "hamburger" id = "side-bar"><a href="#" ><ion-icon name="menu"></ion-icon></a></li>
             </ul>
-            <button class = "button-pop">Login</button>
+
         </nav>
     </header>
 
