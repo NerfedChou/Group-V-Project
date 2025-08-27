@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Rustlers</title>
 </head>
@@ -31,13 +33,13 @@
             <form action = "backend.php" method = "post">
                 <div class = "input-box">
                     <span class = "icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type = "text" name = "email" id = "email" placeholder = "" required/>
-                    <label for = "email" >E-mail</label>
+                    <input type = "text" name = "email" id = "email-login" placeholder = "" required/>
+                    <label for = "email-login" >E-mail</label>
                 </div>
                 <div class = "input-box">
                     <span class = "icon"><ion-icon name="lock"></ion-icon></span>
-                    <input type = "password" name = "password" placeholder = "" required/>
-                    <label for = "password" >Password</label>
+                    <input type = "password" name = "password" id = "password-login" placeholder = "" required/>
+                    <label for = "password-login" >Password</label>
                 </div>
                 <div class = "remember-forgot">
                     <label><input type="checkbox">Remember me</label>
