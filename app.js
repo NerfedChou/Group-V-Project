@@ -26,6 +26,7 @@ buttonPop.forEach(btn => {
 closePop.addEventListener('click', () => {
     wrapper.classList.remove('active-popup');
     formBlur.classList.remove('active-blur');
+    wrapper.classList.remove('active');
 
 })
 
