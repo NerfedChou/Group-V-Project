@@ -6,7 +6,6 @@ mga frontends pang hapakon tamog mag gama mog inyong colors
 colors [16181a , beb3a2, c4bcaf, d2cec6]
 */
 
-
 @font-face {
     font-family: 'Poppins';
     src: url("poppins/Poppins-Regular.ttf");
@@ -113,7 +112,7 @@ header {
     opacity: 0;
     z-index: 2;
     width: 25%;
-    height: 50vh;
+    height: 540px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -210,6 +209,7 @@ header {
 }
 .wrapper .form-container h2 {
     font-size: 2rem;
+    cursor: default;
 }
 
 .wrapper .form-container .input-box {
