@@ -70,12 +70,13 @@ header {
 }
 #main-nav button {
     background-color: #BEB3A2;
-    padding: 7px 20px;
+    padding: 15px 40px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     color: #2f3134;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 0.5s ease;
@@ -111,7 +112,7 @@ header {
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 25%;
-    height: auto;
+    height: 50vh;
     position: fixed;
     display: flex;
     align-items: center;
@@ -123,6 +124,29 @@ header {
     padding-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 30rem;
+    transition: height 1s ease;
+    max-height: 200rem;
+
+}
+.wrapper.active {
+    height: 60vh;
+}
+
+.wrapper.active #login {
+    transition: 1s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+.wrapper.active #register {
+    transition: opacity 1s ease;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: auto;
 }
 .wrapper .form-container {
     display: flex;
@@ -131,6 +155,29 @@ header {
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+#login {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1s ease;
+}
+#register {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
 }
 
 .close{
@@ -205,12 +252,11 @@ header {
     color: #2f3134;
 }
 
-.wrapper .form-container .remember-forgot {
+.remember-forgot {
     display: flex;
     justify-content: space-evenly;
     font-size: 0.9rem;
     gap: 4.5rem;
-    position: absolute;
     top: 19.5rem;
     font-weight: 500;
 }
@@ -253,20 +299,20 @@ header {
 
 .wrapper .form-container button {
     border: none;
-    padding: 10px 20px;
+    margin: 0 auto;
+    padding: 10px 40px;
     border-radius: 10px;
     background-color: #2f3134;
     color: #BEB3A2;
     font-size: 1.2rem;
     font-weight: 500;
     display: flex;
-    left: 35%;
     position: relative;
     justify-content: center;
     cursor: pointer;
     transition: 0.5s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .wrapper .form-container button:hover {
@@ -287,6 +333,23 @@ header {
     margin-top: 1rem;
 }
 .register-link a {
+    text-decoration: underline;
+    color: #2f3134;
+    font-weight: 600;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #2f3134;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.login-link a {
     text-decoration: underline;
     color: #2f3134;
     font-weight: 600;
