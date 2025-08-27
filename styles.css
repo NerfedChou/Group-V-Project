@@ -19,12 +19,16 @@ colors [16181a , beb3a2, c4bcaf, d2cec6]
         opacity: 1;
         margin-right: 3rem;
         transform: scale(1.5);
+        pointer-events: auto;
     }
 }
 @media (max-width: 400px) {
     #main-nav .sidebar {
         display: flex;
         align-items: center;
+    }
+    .hamburger {
+        pointer-events: auto;
     }
 }
 
