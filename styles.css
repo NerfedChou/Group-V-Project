@@ -228,7 +228,7 @@ header {
 }
 @media screen and (max-width: 400px) {
     .wrapper.active {
-        height: 85vh;
+        height: 70vh;
     }
 }
 .wrapper.active #login {
@@ -241,7 +241,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
     opacity: 1;
     pointer-events: auto;
@@ -348,7 +348,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     font-size: 0.9rem;
-    gap: 4.5rem;
+    gap: 1.5rem;
     top: 19.5rem;
     font-weight: 500;
 }
