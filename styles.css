@@ -21,8 +21,10 @@ colors [16181a , beb3a2, c4bcaf, d2cec6]
         pointer-events: auto;
         z-index: 10;
     }
+    .form-container {
+        width: 50%;
+    }
 }
-
 
 @font-face {
     font-family: 'Poppins';
@@ -210,7 +212,7 @@ header {
     -webkit-backdrop-filter: blur(4px);
     padding-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 25rem;
+    min-width: 20rem;
     transition: height 1s ease;
     max-height: 100rem;
 }
@@ -221,7 +223,13 @@ header {
     display: flex;
 }
 .wrapper.active {
+    display: flex;
     height: 60vh;
+}
+@media screen and (max-width: 400px) {
+    .wrapper.active {
+        height: 90vh;
+    }
 }
 .wrapper.active #login {
     transition: 1s ease;
@@ -243,14 +251,13 @@ header {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 #login {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
     opacity: 1;
     pointer-events: auto;
