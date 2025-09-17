@@ -1,20 +1,85 @@
 @font-face {
     font-family: 'Poppins';
-    src: url('/poppins/Poppins-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
 }
 
-html {
-    margin: 0;
-    padding: 0;
+:root {
+    color-scheme: dark light;
 }
 
+html,
 body {
     margin: 0;
+    height: 100%;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+li {
+    list-style: none;
+    /*border: 1px solid white;*/
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    object-fit: cover;
+}
+.main-nav ul li a h1 {
+    font-size: 16px;
+}
+
+svg {
+    display: flex;
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        fill: var(--color-styling-light);
+        color: var(--color-foreground);
+        border-color: var(--color-styling-dark);
+    }
+    body {
+        background-color: black;
+    }
+    .main-nav {
+        background-color: black;
+    }
+    .web-updates {
+        background-color: var(--color-secondary);
+    }
+    #trending,
+    #recommended {
+        background-color: var(--color-secondary);
+    }
+    .search-bar {
+        background-color: black;
+    }
+}
+
+.main-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+main {
+    height: 100%;
+    margin-top: 4rem;
+}
