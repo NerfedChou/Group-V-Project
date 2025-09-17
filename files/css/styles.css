@@ -53,7 +53,7 @@
 
 .shortcuts a:hover,
 .hover-overlay:hover{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(92, 87, 87, 0.2);
 }
 
 .search-bar {
@@ -67,6 +67,12 @@
 
 .search {
     position: relative;
+}
+
+.search-bar:focus,
+.search-bar:active {
+    border-color: var(--color-primary);
+    outline: none;
 }
 
 .sr-only {
@@ -110,7 +116,6 @@
 
 .dashboard .left {
     border-right: var(--border-thin-solid);
-    background-color: var(--color-secondary);
 }
 
 .dashboard .main-panel {
@@ -146,6 +151,8 @@
     padding: 10px;
     border-radius: var(--header-border-radius);
     background: #408a40;
+    color: var(--color-foreground);
+    fill: var(--color-foreground);
 }
 
 .left .create-button span {
@@ -242,7 +249,101 @@
     border-radius: var(--header-border-radius);
 }
 
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-header div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+.main-feed .item-profile {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    border: var(--border-thin-solid);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main-feed .item-profile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-feed .item-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-feed .item-info-wrapper section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-feed .item-details {
+    margin-top: 10px;
+}
+
+.star-button button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: var(--border-thin-solid);
+    border-radius: var(--header-border-radius);
+}
+
+
 .main-feed #recommended li,
 .main-feed #trending li {
     padding: 0 10px;
 }
+
+.items li {
+    border-bottom: var(--border-thin-solid);
+}
+
+.items li:last-child {
+    border-bottom: none;
+}
+
+
+footer {
+    width: 100%;
+    border-top: var(--border-thin-solid);
+    display: flex;
+    height: 10rem;
+}
+
+.footer-contents p {
+    margin-bottom: 60px;
+}
+
+.footer-nav {
+    width: 100%;
+}
+
+.footer-contents {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+

@@ -64,6 +64,9 @@ svg {
     .web-updates {
         background-color: var(--color-secondary);
     }
+    .left {
+        background-color: var(--color-secondary);
+    }
     #trending,
     #recommended {
         background-color: var(--color-secondary);
@@ -71,15 +74,42 @@ svg {
     .search-bar {
         background-color: black;
     }
+    .project-search {
+        background-color: var(--color-secondary);
+    }
+    .shortcuts a:hover,
+    .hover-overlay:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
 }
 
 .main-nav {
-    position: fixed;
+    position: relative;
     width: 100%;
     top: 0;
 }
 
+input {
+    outline: none;
+}
+
 main {
     height: 100%;
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
+}
+
+.favorites{
+    fill: #fcba03;
+}
+
+.activity {
+    fill: red;
+}
+.explore {
+    fill: brown;
+}
+
+.discuss {
+    fill: green;
 }
