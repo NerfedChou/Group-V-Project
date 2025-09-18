@@ -181,7 +181,6 @@
 .side-bar-nav {
     display: flex;
     flex-direction: column;
-    padding: 24px 0;
     border-bottom: var(--border-thin-solid);
 }
 
@@ -409,11 +408,11 @@
     padding: 0 10px;
 }
 
-.items li {
+.item li {
     border-top: var(--border-thin-solid);
 }
 
-.items li:first-child {
+.item li:first-child {
     border-top: none;
 }
 
