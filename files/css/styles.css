@@ -214,15 +214,19 @@
 }
 
 .transaction-item {
-    padding-left: 42px;
+    padding: 0 0 5px 16px;
     position: relative;
     border-left: var(--border-thin-solid);
+}
+
+.transaction-item:last-child {
+    padding-bottom: 0;
 }
 
 .transaction-item::before {
     content: '';
     position: absolute;
-    left: -5.70px;
+    left: -5.85px;
     top: -6px;
     width: 8px;
     height: 8px;
@@ -309,11 +313,6 @@
 .main-feed .item-info-wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
-}
-
-.main-feed .item-info-wrapper:nth-child(1) {
-    padding-top: 0;
 }
 
 .main-feed .item-info-wrapper section{
@@ -353,27 +352,28 @@
 
 .main-feed #recommended li,
 .main-feed #trending li {
+    padding: 30px 10px 0 10px;
+}
+
+.main-feed #recommended li:first-child,
+.main-feed #trending li:first-child {
     padding: 0 10px;
 }
 
 .items li {
-    border-bottom: var(--border-thin-solid);
+    border-top: var(--border-thin-solid);
 }
 
-.items li:last-child {
-    border-bottom: none;
+.items li:first-child {
+    border-top: none;
 }
-
 
 footer {
     width: 100%;
-    border-top: var(--border-thin-solid);
     display: flex;
-    height: 10rem;
-}
-
-.footer-contents p {
-    margin-bottom: 60px;
+    justify-content: center;
+    left: 50%;
+    border-top: var(--border-thin-solid);
 }
 
 .footer-nav {
@@ -389,6 +389,7 @@ footer {
 
 .footer-nav ul {
     display: flex;
-    justify-content: space-around;
+    gap: 1rem;
+    justify-content: center;
 }
 
