@@ -254,6 +254,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 .item-header div {
@@ -284,6 +285,11 @@
 .main-feed .item-info-wrapper {
     display: flex;
     justify-content: space-between;
+    padding-top: 30px;
+}
+
+.main-feed .item-info-wrapper:nth-child(1) {
+    padding-top: 0;
 }
 
 .main-feed .item-info-wrapper section{
@@ -294,6 +300,21 @@
 
 .main-feed .item-details {
     margin-top: 10px;
+}
+
+.ratings {
+    margin-top: 10px;
+    justify-content: end;
+    display: flex;
+    padding: 10px;
+}
+
+.main-feed .ratings-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+
 }
 
 .star-button button {
