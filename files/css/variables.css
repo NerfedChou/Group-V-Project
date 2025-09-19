@@ -18,6 +18,11 @@
     --color-accent-hover: #8250df;
     --color-border: #30363d;
     --color-border-hover: #c52b2b;
+    --color-muted: #4c4c4c;
+    --color-muted-hover: #6e7681;
+    --color-error: #f85149;
+    --color-success: #56d364;
+    --color-warning: #e3b341;
 
 
     /*dark*/

@@ -70,7 +70,8 @@
     border: var(--border-thin-solid);
     border-radius: var(--header-border-radius);
     padding: 8px 20px 8px 30px;
-    width: 265px;
+    width: 100%;
+    max-width: 265px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -79,6 +80,31 @@
 
 .search {
     position: relative;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    /*width: 64%;*/
+    width: 0;
+    height: 7vh;
+    padding: var(--header-padding);
+    background-color: var(--color-secondary);
+    border: var(--border-thin-solid);
+    border-radius: var(--header-border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    .search-suggestions {
+        width: 100%;
+        left: 0;
+    }
 }
 
 .search-bar:focus,
@@ -214,12 +240,20 @@
     border-radius: 10px;
 }
 
+.projects li a,
 .side-bar-nav ul li a{
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 10px;
+    padding: 2px;
+}
 
+.projects li a:hover,
+.side-bar-projects li a:hover,
+.projects li a:hover span,
+.side-bar-projects li a:hover span {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
 .projects-sidebar {
@@ -230,7 +264,7 @@
     padding: 24px;
 }
 
-.side-bar-projects li {
+.side-bar-projects li a{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -283,6 +317,7 @@
     display: block;
     margin-bottom: 8px;
     text-decoration: underline;
+    color: var(--color-muted);
 }
 
 .project-transaction {
