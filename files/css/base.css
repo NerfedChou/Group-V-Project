@@ -84,13 +84,24 @@ svg {
         background-color: black;
     }
 
+    .search-suggestions {
+        background-color: var(--color-secondary);
+    }
+    .new-project-expand {
+        background-color: var(--color-secondary);
+    }
 }
 
 @media (prefers-color-scheme: light) {
     .side-bar {
         background-color: white;
     }
-    
+    .new-project-expand {
+        background-color: white;
+    }
+    .search-suggestions {
+        background-color: white;
+    }
 }
 
 .main-nav {

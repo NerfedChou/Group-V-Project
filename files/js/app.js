@@ -76,3 +76,31 @@ document.addEventListener("mousedown", function(event) {
 });
 
 search.addEventListener("click", searchExpanded);
+
+newBtn = document.querySelector("#new-project-btn");
+newBtnExpanded = document.querySelector(".new-project-expand");
+
+isActive = false;
+function expandNewBtn() {
+    if (!isActive) {
+        newBtnExpanded.style.display = "block";
+        isActive = true;
+    } else {
+        newBtnExpanded.style.display = "none";
+        isActive = false;
+    }
+
+}
+
+function newBtnClose() {
+    newBtnExpanded.style.display = "none";
+}
+
+newBtn.addEventListener("click", expandNewBtn);
+
+document.addEventListener("mousedown", function(event) {
+    if (isActive && !newBtnExpanded.contains(event.target) && !newBtn.contains(event.target)) {
+        newBtnClose();
+        isActive = false;
+    }
+});
