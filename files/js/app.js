@@ -104,3 +104,32 @@ document.addEventListener("mousedown", function(event) {
         isActive = false;
     }
 });
+
+mainProfile = document.querySelector("#profile-expand");
+profileBtn = document.querySelector(".main-profile-btn");
+
+profileActive = false;
+function expandProfile() {
+    if (!profileActive) {
+        mainProfile.style.display = "block";
+        profileActive = true;
+    } else {
+        mainProfile.style.display = "none";
+        profileActive = false;
+    }
+}
+
+function profileClose() {
+    mainProfile.style.display = "none";
+}
+
+profileBtn.addEventListener("click", expandProfile);
+
+document.addEventListener("mousedown", function(event) {
+    if (profileActive && !mainProfile.contains(event.target) && !profileBtn.contains(event.target)) {
+        profileClose();
+        profileActive = false;
+    }
+});
+
+

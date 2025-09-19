@@ -167,6 +167,42 @@
     object-fit: cover;
 }
 
+#profile-expand {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border: var(--border-thin-solid);
+    padding: 0;
+    border-radius: var(--header-border-radius);
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+#profile-expand li:nth-child(4) {
+    margin-left: 0;
+}
+#profile-expand li,
+#profile-expand li a{
+    justify-content: start;
+    border: none;
+    padding: var(--header-padding);
+    margin-bottom: 10px;
+}
+
+#profile-expand li a:hover{
+    background-color: var(--color-styling-dark-secondary);
+    border-radius: var(--header-border-radius);
+}
+#profile-expand li:first-child{
+    border-bottom: 1px solid var(--color-styling-dark-secondary);
+    border-radius: 0;
+    height: 60px;
+    width: 256px;
+    gap: 10px;
+}
+
 .dashboard {
     display: grid;
     grid-template-columns: 360px 1fr;

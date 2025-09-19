@@ -90,6 +90,9 @@ svg {
     .new-project-expand {
         background-color: var(--color-secondary);
     }
+    #profile-expand {
+        background-color: black;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -100,6 +103,9 @@ svg {
         background-color: white;
     }
     .search-suggestions {
+        background-color: white;
+    }
+    #profile-expand {
         background-color: white;
     }
 }
