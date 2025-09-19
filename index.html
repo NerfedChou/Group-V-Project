@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="files/css/styles.css" type="text/css">
     <title>Guthib</title>
@@ -14,12 +13,12 @@
         <nav class="main-nav">
             <ul>
                 <li class="hover-overlay">
-                    <a href="#" class="hamburger-menu">
+                    <button class="hamburger-menu">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                              data-view-component="true">
                             <path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path>
                         </svg>
-                    </a>
+                    </button>
                 </li> <!--HM-->
                 <li>
                     <a href="#">
@@ -27,18 +26,15 @@
                     </a>
                 </li> <!--Logo-->
                 <li>
-                    <a href="#">
-                        <h1>Dashboard</h1>
-                    </a>
+                    <h1><a href="#">Dashboard</a></h1>
                 </li> <!--DashBoard-->
                 <li class="search">
-                    <label for="search" class="sr-only">
+                    <button class="search-bar" id = "search">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                              data-view-component="true" class="octicon octicon-search">
                             <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
                         </svg>
-                    </label>
-                    <input type="text" name="search" id="search" placeholder="Search..." class="search-bar"/>
+                        Search for ...</button>
                 </li> <!--Search-->
                 <li class="hover-overlay">
                     <button>
@@ -116,7 +112,7 @@
                     </a>
                 </div>
                 <input type="text" class="project-search search-bar" placeholder="Find a project..."/>
-                <ul id="projects">
+                <ul class="projects">
                     <li class="projects-list">My-Journey-to-fullstack</li>
                     <li class="projects-list">Portfolio-Website</li>
                     <li class="projects-list">Weather-App</li>
@@ -188,8 +184,36 @@
                         </ul>
                     </section>
                 </nav> <!--First Bar navigation-->
-
-            </section><!--Sidebar navigation-->
+                <section class="side-bar-header">
+                    <section class="side-bar-header-wrapper">
+                        <h4 class = "projects-sidebar">Projects</h4>
+                        <button class="hover-overlay">
+                            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search">
+                                <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
+                            </svg>
+                        </button>
+                    </section>
+                        <ul class="projects side-bar-projects">
+                            <li class="projects-list">
+                                <div class="profile sidebar-prof"><img src="assets/Guthib.png"/></div>
+                                <span>My-Journey-to-fullstack</span>
+                            </li>
+                            <li class="projects-list">
+                                <div class="profile sidebar-prof">
+                                    <img src="assets/Guthib.png"/></div>
+                                    Portfolio-Website
+                            </li>
+                            <li class="projects-list">
+                                <div class="profile sidebar-prof"><img src="assets/Guthib.png"/></div>
+                                Weather-App
+                            </li>
+                            <li class="projects-list">
+                                <div class="profile sidebar-prof"><img src="assets/Guthib.png"/></div>
+                                To-Do-List
+                            </li>
+                            <!--Project form database will go here-->
+                        </ul>
+                </section><!--Sidebar navigation-->
         </aside>
         <section class="main">
             <div class="main-panel">
@@ -483,5 +507,6 @@
         </nav>
     </section>
 </footer>
+<script src="files/js/app.js"></script>
 </body>
 </html>
